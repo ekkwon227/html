@@ -1,79 +1,167 @@
 <!DOCTYPE html>
-<html>
+<!--
+Created using JS Bin
+http://jsbin.com
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Html : test1">
+Copyright (c) 2014 by gracekwon (http://jsbin.com/zuzaqo/14/edit)
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Letter</title>
+    <style>
+    body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 16px;
+        padding: 2em;
+        background-color: #eee;
+        background-image:url("logo_Condition08.gif");
+        background-repeat:no-repeat;
+        background-size:18%;
+        background-position:90% 8%;
+        margin: 30px 30px; 
+    }
+    address {
+      font-style: normal;
+      line-height:110%;
+    }
+    h3 {
+      margin: 40px 0 20px;
+    }  
+    p {
+      line-height: 120%;
+      text-align: justify;
+    }
+    h4 {
+      font-style:italic;
+      text-align:right;
+      margin :0;
+    }
+    table {
+      width: 100%;
+      margin: 10px 0;
+      font-size:0.8em;
+    }
+    caption {
+      margin: 5px;
+    }
+    th, td {
+      padding: 5px;
 
-    <title>Html</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ekkwon227/html">View on GitHub</a>
-
-          <h1 id="project_title">Html</h1>
-          <h2 id="project_tagline">test1</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/ekkwon227/html/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/ekkwon227/html/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Html maintained by <a href="https://github.com/ekkwon227">ekkwon227</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+    }
+    th {
+      background-color: #ccc;
+    }
+    td {
+      text-align: center;
+      border-style:solid;
+      border-width:1px;
+      border-color:#ddd;
+    }
     
+    .collection {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
-  </body>
+    .collection li {
+        float: left;
+        margin: 1.5em 1.3%;
+        padding: 0;
+        width: 14%;
+        box-shadow: 1px 1px 3px #AAA;
+        background-color: #eee;
+
+    }
+    .collection li h2 {
+        margin: 0.1em;
+        padding: 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+   .collection li img {
+        box-sizing: border-box;
+        width: 80%;
+        margin-left:10%;
+        margin-top:10%;
+    }
+    </style>
+</head>
+<body>
+<address>
+Mr. David Kimberly<br>
+Director General, Civil Aviation<br>
+Government of Seychelles<br>
+10 Island View Parkway<br>
+Seychelles<br>
+</address>
+<h3>Dear David:</h3>
+<p>
+I would like to take this opportunity to express my heartfelt thanks to you for your very active participation in our recent conference in Montreal on the "future of aviation". The Chairman and Board Members have also asked me to pass on their sincere appreciation for your efforts in supporting the Institute in this important undertaking.
+</p>
+<ul class="collection">
+        <li>
+            <img src="http://kaywonsad.appspot.com/s/art01.jpg" alt="#1">
+            <h2>Lorem ipsum</h2>
+        </li>
+        <li>
+            <img src="http://kaywonsad.appspot.com/s/art02.jpg" alt="#2">
+            <h2>Dolor sit amet</h2>
+        </li>
+        <li>
+            <img src="http://kaywonsad.appspot.com/s/art03.jpg" alt="#3">
+            <h2>Consectetur</h2>
+        </li>
+        <li>
+            <img src="http://kaywonsad.appspot.com/s/art04.jpg" alt="#4">
+            <h2>Lorem ipsum</h2>
+        </li>
+        <li>
+            <img src="http://kaywonsad.appspot.com/s/art05.jpg" alt="#5">
+            <h2>Dolor sit amet</h2>
+        </li>
+        <li>
+            <img src="http://kaywonsad.appspot.com/s/art06.jpg" alt="#6">
+            <h2>Consectetur</h2>
+        </li>
+    </ul>
+
+<table>
+      <caption>Figure 1. 2014 Sales Revenue</caption>
+      <thead>
+        <tr>
+          <th>Jan</th>
+          <th>Feb</th>
+          <th>Mar</th>
+          <th>Apr</th>
+          <th>May</th>
+          <th>Jul</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1,234</td>
+          <td>567</td>
+          <td>890</td>
+          <td>1,234</td>
+          <td>5,678</td>
+          <td>9,012</td>
+        </tr>
+      </tbody>
+    </table>
+<p>
+We are currently hard at work producing the "Compendium of Conference Proceedings" document, and we expect to be sending it out to all participants early in the new year. Again, thanks so much for your enthusiastic participation in our conference. I have no doubt that it would not have been the success that it was without your presence.
+</p>
+<p>
+Please keep in touch, and drop in and visit us whenever you are in this part of the world.
+</p>
+<p>
+Very sincerely,</p>
+<h4>Peter Smithfield</h4>
+<h4>President and CEO</h4>
+</body>
 </html>
